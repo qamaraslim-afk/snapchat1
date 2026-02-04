@@ -1,0 +1,177 @@
+/* From original index.css */
+:root {
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #fffc00;
+    /* Snapchat Yellow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* From original App.css */
+.app-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 
+   We try to mimic the "web" login look which is often a clean card.
+   However, user might want the "Yellow" feel. 
+   We'll make the card white with shadow, sitting on the yellow body.
+*/
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 40px;
+    border-radius: 8px;
+    /* Slightly rounded */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ghost-logo-container {
+    margin-bottom: 24px;
+}
+
+.ghost-icon {
+    width: 60px;
+    height: auto;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 32px 0;
+    text-align: center;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input {
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: border-color 0.2s, background-color 0.2s;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #fffc00;
+    /* Snapchat highlight? Or Blue? usually black or blue on web. */
+    border-color: #333;
+    /* Clean dark focus */
+    background-color: #fff;
+}
+
+.input-extras {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #fffc00;
+    /* Primary brand color for button? Or Blue? */
+    /* Actually on web accounts, button is standard Blue #0F9AFE often, or black. 
+     But yellow is the brand. Let's try Yellow button with Black text for max branding.
+     Wait, Yellow on White card is good.
+  */
+    background-color: #fffc00;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    /* Pill shape */
+    margin-top: 10px;
+    transition: transform 0.1s ease, background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #f2ef00;
+    transform: scale(1.01);
+}
+
+.signup-section {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.new-user-text {
+    margin-right: 5px;
+}
+
+.signup-link {
+    color: #000;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 24px;
+        box-shadow: none;
+        background: transparent;
+        /* On very small screens, merge with yellow? No, readability. Keep white or make full screen white? */
+        /* Let's keep card for structure consistency */
+    }
+}
